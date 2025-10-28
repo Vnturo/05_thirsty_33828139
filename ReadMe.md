@@ -1,4 +1,4 @@
-# 05_thirsty_12345678 - Thirsty Student Shop (Lab 5)
+# 05_thirsty_33828139 - Thirsty Student Shop (Lab 5)
 
 This application is the "Thirsty Student Shop" web server, built with Node.js and the Express framework. It demonstrates the use of the EJS templating engine, form handling for both GET and POST methods, and static file serving as required for Lab 5.
 
