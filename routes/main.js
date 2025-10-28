@@ -48,10 +48,10 @@ router.post("/registered", (req, res) => {
     
     // Check if the email is valid
     if (validateEmail(req.body.email)) {
-        // If valid, set success message
+        // If valid, say successfull message
         message = 'Hello '+ req.body.first+' '+req.body.last+', you are now registered!. An email has been sent to '+ req.body.email;
     } else {
-        // If invalid, set error message
+        // If invalid, say error message
         message = 'Email validation failed: "'+ req.body.email + '" is not a valid email. Please go back and try again.';
     }
 
@@ -73,7 +73,7 @@ router.post("/survey_results", (req, res) => {
     
     // Check if the email is valid first
     if (validateEmail(req.body.email)) {
-        // Email IS valid, proceed as normal
+        // Email is valid, proceed as normal
         
         // Checkbox value is 'on' if checked, undefined if not
         let isStudent = req.body.student === 'on' ? 'Yes' : 'No';
@@ -89,8 +89,7 @@ router.post("/survey_results", (req, res) => {
             studentStatus: isStudent
         });
     } else {
-        // Email IS NOT valid, render an error message
-        // We can reuse the registered.ejs template to show the error
+// Email is invalid, show error message
         res.render("registered.ejs", {
             shopName: shopData.shopName,
             message: 'Email validation failed: "' + req.body.email + '" is not a valid email. Please go back and try again.'
